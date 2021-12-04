@@ -77,7 +77,7 @@ function handleCardClick(event) {
 
   // otherwise check to see if other up card is same color as the card user just clicked on
   else {
-      score++;
+    //   score++;
       const otherUp = document.querySelector(".up"); 
       if (clickedDiv.classList[0] == otherUp.classList[0]) {
           clickedDiv.classList.add("found");
