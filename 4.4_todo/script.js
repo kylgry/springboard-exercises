@@ -10,6 +10,7 @@ function addTask(){
 function displayTask(taskText){
     newTask = document.createElement("p");
     newTask.innerHTML = taskText;
+    newTask.id = document.querySelectorAll("#tasks p").length;
    
     // add checkbox
     check = document.createElement("input");
@@ -41,10 +42,17 @@ function completeTask(item) {
 }
 
 function removeTask(item) {
-    task = item.target;
+    task = item.target.parentElement;
+    console.log("delete task "+task.id);
     taskIndex.splice(task.id,1);
-    task.parentElement.remove();
+    console.log(taskIndex);
+    task.remove();
     localStorage.setItem("tasks",JSON.stringify(taskIndex));
+
+    // reset ids
+    for (let i = 0; i < taskIndex.length; i++) {
+        document.querySelectorAll("#tasks p")[i].id = i;
+    }
 }
 
 function loadTasks() {
@@ -54,9 +62,6 @@ function loadTasks() {
     }
     for (task of taskIndex){
         displayTask(task);
-    }
-    for (let i = 0; i < taskIndex.length; i++){
-        document.querySelectorAll("#tasks p")[i].id = i;
     }
 }
 
