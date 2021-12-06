@@ -1,0 +1,31 @@
+body {
+  font-family: Helvetica;
+  background-color: #101010;
+  color: white;
+  width:800px;
+  margin: auto;
+}
+
+#tasks p {
+  margin: 10px;
+}
+
+#tasks p input {
+  margin-right: 10px;
+}
+
+.x {
+  margin-left: 10px;
+}
+
+#buttons {
+  padding:40px 0px 20px 0px;
+}
+
+#inputTask {
+  width: 80%;
+}
+
+.complete {
+  text-decoration: line-through;
+}
