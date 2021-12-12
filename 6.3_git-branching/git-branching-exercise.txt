@@ -1,0 +1,16 @@
+
+what git command creates a branch?
+git checkout -b
+
+what is the difference between a fast-forward and recursive merge?
+fast-forward is a linear change where no changes were made to main branch.
+a recursive merge must resolve changes on both the main branch and merging branch.
+
+what git command changes to another branch? 
+git checkout
+
+what git command deletes a branch?
+git branch -d
+
+how do merge conflicts happen?
+when there are multiple changes/commits on both branches being merged
