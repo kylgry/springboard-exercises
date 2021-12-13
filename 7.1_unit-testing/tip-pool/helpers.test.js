@@ -28,12 +28,6 @@ describe("helpers", function() {
 
 
   afterEach(function() {
-    // teardown logic
-    // billAmtInput.value = '';
-    // tipAmtInput.value = '';
     allPayments = {};
-    // paymentId = 0;
-    // document.querySelector("#paymentTable tbody").innerHTML = '';
-    // document.querySelector("#summaryTable tbody").innerHTML = '';
   });
 });
