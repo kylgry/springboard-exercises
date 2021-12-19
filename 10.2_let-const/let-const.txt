@@ -1,0 +1,15 @@
+const pi = 3.14;
+
+what is the difference between let and var?
+var is added to window object, and is in function scope.
+let is not added to window object, and is only in block scope.
+
+what is the difference between var and const?
+const variables cannot be reassigned or redeclared, while var variables can.
+const is also in block scope unlike var which is in function scope.
+
+what is the difference between let and const?
+let can be reassigned or redeclared unlike const.
+
+what is hoisting?
+hoisting is when var variables are declared at the beginning of the script running. 
