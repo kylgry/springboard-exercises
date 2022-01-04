@@ -35,3 +35,7 @@ the local domain name server and find the IP address associated with the domain.
 sent to the web server, who will interpret the request and respond with the information, perhaps a
 web page with HTML. The html page may include several urls to scripts, style sheets, and images, which
 all are requested and returned in a similar manner.
+
+Part 2:
+curl https://icanhazdadjoke.com/search?term=pirate
+dig icanhazdadjoke.com --> two results 104.21.37.176 and 172.67.211.64
