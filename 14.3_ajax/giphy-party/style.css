@@ -1,0 +1,25 @@
+body {
+    background-color:#111;
+    color: #eee;
+    margin: auto;
+    padding: 50px 0px 50px 0px;
+    width: 1000px;
+    display: block;
+    font-family: Helvetica;
+}
+
+#form {
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+}
+
+#form input {
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+#gifs img {
+  height: 200px;
+  margin: 10px;
+}
