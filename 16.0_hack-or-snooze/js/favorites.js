@@ -14,12 +14,13 @@ async function getStoryFromId(storyId) {
 
 async function favorite() {
 
-  const li = $(this).parent();
+  const li = $(this).parent().parent();
   const storyId = li.attr('id');
   let story = null;
 
   if (li.parent().attr('id') == "all-stories-list") {
-    const index = $(this).parent().index();
+    console.log('true');
+    const index = $(this).parent().parent().index();
     story = storyList.stories[index];
   }
 
@@ -30,8 +31,6 @@ async function favorite() {
   else {
     story = await getStoryFromId(storyId);
   }
-
-  console.log(story);
 
   const response = await currentUser.addFavorite(story);
 
@@ -44,7 +43,7 @@ async function favorite() {
 
 async function unFavorite() {
 
-  const storyId = $(this).parent().attr('id');
+    const storyId = $(this).parent().parent().attr('id');
 
   const response = await currentUser.removeFavorite(storyId);
 
@@ -86,9 +85,6 @@ function putFavoritesOnPage() {
   $allFavoritesList.show();
 
 }
-
-
-
 
 $allStoriesList.on("click",".story-favorite", favorite);
 $allStoriesList.on("click",".story-unfavorite", unFavorite);

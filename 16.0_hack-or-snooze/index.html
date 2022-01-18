@@ -18,7 +18,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hack or Snooze</title>
+  <title>Slacker News</title>
   <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -35,12 +35,12 @@
 <!-- top navigation bar -->
 <nav>
   <div class="navbar-brand">
-    <a class="nav-link" href="#" id="nav-all">Hack or Snooze</a>
+    <a class="nav-link" href="#" id="nav-all">Slacker News</a>
   </div>
   <div class="nav-right">
     <a class="nav-link hidden" href="#" id="nav-favorites">favorites</a>
     <a class="nav-link hidden" href="#" id="nav-submit">submit</a>
-    <a class="nav-link" href="#" id="nav-login">login/signup</a>
+    <a class="nav-link" href="#" id="nav-login">login or signup</a>
     <a class="nav-link" href="#" id="nav-user-profile"></a>
     <a class="hidden" id="nav-logout" href="#"><small>(logout)</small></a>
   </div>
@@ -70,17 +70,16 @@
 
   <!-- Login form -->
   <form action="#" id="login-form" class="account-form hidden" method="post">
-    <h4>Login</h4>
+    <!-- <h4>Login</h4> -->
     <div class="login-input">
-      <label for="login-username">username</label>
-      <input id="login-username" autocomplete="current-username">
+      <!-- <label for="login-username">username</label> -->
+      <input id="login-username" autocomplete="current-username" placeholder="username">
     </div>
     <div class="login-input">
-      <label for="login-password">password</label>
-      <input id="login-password" type="password" autocomplete="current-password">
+      <!-- <label for="login-password">password</label> -->
+      <input id="login-password" type="password" autocomplete="current-password" placeholder="password">
     </div>
     <button type="submit">login</button>
-    <hr>
   </form>
 
   <!-- Signup form -->
@@ -89,18 +88,18 @@
       id="signup-form"
       class="account-form hidden"
       method="post">
-    <h4>Create Account</h4>
+    <!-- <h4>Create Account</h4> -->
     <div class="login-input">
-      <label for="signup-name">name</label>
-      <input id="signup-name" autocapitalize="words">
+      <!-- <label for="signup-name">name</label> -->
+      <input id="signup-name" autocapitalize="words" placeholder="display name">
     </div>
     <div class="login-input">
-      <label for="signup-username">username</label>
-      <input id="signup-username" autocomplete="new-username">
+      <!-- <label for="signup-username">username</label> -->
+      <input id="signup-username" autocomplete="new-username" placeholder="username">
     </div>
     <div class="login-input">
-      <label for="signup-password">password</label>
-      <input id="signup-password" autocomplete="new-password" type="password">
+      <!-- <label for="signup-password">password</label> -->
+      <input id="signup-password" autocomplete="new-password" type="password" placeholder="password">
     </div>
     <button type="submit">create account</button>
   </form>
@@ -110,21 +109,21 @@
 
   <!-- submit form -->
   <form action="#" id="submit-form" class="submit-form hidden" method="post">
-    <h4>Submit</h4>
+    <!-- <h4>Submit</h4> -->
     <div class="story-input">
-      <label for="submit-author">author</label>
-      <input id="submit-author">
+      <!-- <label for="submit-author">author</label> -->
+      <input id="submit-author" placeholder="author">
     </div>
     <div class="story-input">
-      <label for="submit-title">title</label>
-      <input id="submit-title">
+      <!-- <label for="submit-title">title</label> -->
+      <input id="submit-title" placeholder="title">
     </div>
     <div class="story-input">
-      <label for="submit-url">url</label>
-      <input id="submit-url">
+      <!-- <label for="submit-url">url</label> -->
+      <input id="submit-url" placeholder="url">
     </div>
     <button type="submit">submit</button>
-    <hr>
+    <!-- <hr> -->
   </form>
 
 </section>

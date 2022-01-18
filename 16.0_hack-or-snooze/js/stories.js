@@ -19,16 +19,15 @@ function generateStoryMarkup(story) {
   const hostName = story.getHostName();
   const $story =  $(`
       <li id="${story.storyId}">
-        <a href="${story.url}" target="a_blank" class="story-link">
-          ${story.title}
-        </a>
-        <small class="story-hostname">(${hostName})</small>
-        <small class="story-author">by ${story.author}</small>
-        <small class="story-user">posted by ${story.username}</small>
+        <a href="${story.url}" target="a_blank" class="story-link">${story.title}</a> (${hostName})
+        <span class="story-bottom-row">posted by ${story.username}</span>
       </li>
     `);
 
   // extra functions for logged in users
+
+  const spacer = ' . ';
+  const $storyBottomRow = $story.children('.story-bottom-row');
 
   if (currentUser) {
 
@@ -36,19 +35,19 @@ function generateStoryMarkup(story) {
 
     if (story.username == currentUser.username) {
       const $delBtn = $('<a href="#" class="del-btn">remove</a>');
-      $story.append($delBtn);
+      $storyBottomRow.append(spacer).append($delBtn);
     }
 
     // adds unfavorite link if story is already favorited, else adds favorite link
 
     if (currentUser.favorites.some(e => e.storyId == story.storyId)) {
       const $unfavorite = $('<a href="#" class="story-unfavorite">unfavorite</a>');
-      $story.append($unfavorite);
+      $storyBottomRow.append(spacer).append($unfavorite);
     }
 
     else {
       const $favorite = $('<a href="#" class="story-favorite">favorite</a>');
-      $story.append($favorite);
+      $storyBottomRow.append(spacer).append($favorite);
     }
 
   }
@@ -61,6 +60,7 @@ function putStoriesOnPage() {
   console.debug("putStoriesOnPage");
 
   $allStoriesList.empty();
+  hidePageComponents();
 
   for (let story of storyList.stories) {
     const $story = generateStoryMarkup(story);
@@ -105,12 +105,12 @@ async function submitStory(evt) {
 
 async function removeStory() {
 
-  const storyId = $(this).parent().attr('id');
+  const storyId = $(this).parent().parent().attr('id');
   const response = storyList.deleteStory(currentUser.loginToken, storyId);
   const index = storyList.stories.findIndex( x => x.storyId == storyId )
 
   storyList.stories.splice(index,1)
-  $(this).parent().remove();
+  $(this).parent().parent().remove();
 
 }
 

@@ -3,6 +3,7 @@
 body {
   font-family: Arimo, sans-serif;
   margin: 8px 7.5vw;
+  background-color: #333;
 }
 
 h1 {
@@ -37,7 +38,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-self: center;
-  background-color: #f6f6ef;
+  background-color: #EEE;
+  border-radius: 5px;
 }
 
 .hidden {
@@ -50,11 +52,11 @@ a:hover {
 form {
   display: flex;
   flex-direction: column;
-  margin: 8px 18px 0;
+  margin: 30px 0px;
 }
 
 form > * {
-  margin: 10px 0;
+  margin-bottom: 20px;
 }
 
 form label {
@@ -82,7 +84,6 @@ form input:focus {
 
 form > button {
   width: 4rem;
-  margin: 5px 0 15px 65px;
   border: none;
   border-radius: 4px;
   padding: 8px;
@@ -106,6 +107,9 @@ form > hr {
   width: 70px;
 }
 
+.submit-forms-container {
+  padding: 0 30px;
+}
 
 /* responsive queries for tightening things up for mobile. */
 

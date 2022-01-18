@@ -6,8 +6,8 @@
 
 .stories-list > li {
   color: gray;
-  font-size: 0.8rem;
-  margin: 10px 0;
+  font-size: 0.7rem;
+  margin: 15px 0;
 }
 
 #stories-loading-msg {
@@ -30,14 +30,8 @@
   text-decoration: none;
 }
 
-.story-author {
-  margin-left: 0em;
-}
-
-.story-user {
+.story-bottom-row {
+  font-size: .7rem;
   display: block;
-}
-
-.del-btn, .story-favorite, .story-unfavorite {
-  font-size: smaller;
+  margin-top: 3px;
 }
