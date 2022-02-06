@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form action="/story">
+    {% for prompt in prompts %}
+    <p><input placeholder="{{prompt}}" name="{{prompt}}"></p>
+    {% endfor %}
+    <button>madlib!</button>
+  </form>
+</body>
+</html>
