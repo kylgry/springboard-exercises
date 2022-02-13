@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, redirect, flash
+from flask import Flask, request, render_template, redirect, flash, session
 import surveys
 
 app = Flask(__name__)
@@ -20,11 +20,12 @@ def display_root():
 @app.route('/questions')
 def display_questions():
     n = len(responses)
-    if n == len(surveys.satisfaction_survey.questions):
+    survey_qs = surveys.satisfaction_survey.questions
+    if n == len(survey_qs):
         return redirect('/thankyou')
     else:
-        question = surveys.satisfaction_survey.questions[n].question
-        choices = surveys.satisfaction_survey.questions[n].choices
+        question = survey_qs[n].question
+        choices = survey_qs[n].choices
         return render_template('question.html', n=n, question=question, choices=choices)
 
 @app.route('/answer', methods=['POST'])
