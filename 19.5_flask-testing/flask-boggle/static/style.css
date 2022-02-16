@@ -1,0 +1,58 @@
+body {
+  background-color: black;
+}
+
+
+#boggle {
+  text-align: center;
+  font-family: 'Roboto Mono';
+  font-size: 40px;
+  font-weight: bold;
+  color: pink;
+  width: 500px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+#score, #timer {
+  margin: 20px;
+  display: inline;
+  background-color: pink;
+  color: black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+#board {
+  margin-top: 40px;
+  background-color: pink;
+  color: black;
+  border-radius: 10px;
+  font-size: 50px;
+}
+
+#board td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+#guess-input {
+  font-family: 'Roboto Mono';
+  background-color: pink;
+  font-size: 30px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 10px;
+  text-align: center;
+  width: 480px;
+  margin-top: 40px;
+}
+
+#response {
+  padding: 20px;
+  text-align: center;
+}

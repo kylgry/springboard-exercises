@@ -1,0 +1,32 @@
+{% extends 'base.html'  %}
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div id="boggle">
+
+<h1>boggle</h1>
+
+<div id="timer">time: <span></span></div><div id="score">score: <span>0</span></div>
+
+
+<table id="board">
+{% for row in session['board'] %}
+<tr>
+{% for column in row %}
+<td>{{ column }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<form id="guess">
+  <input placeholder="GUESS" name="guess" id="guess-input"></input>
+</form>
+
+<div id="response">
+</div>
+
+</div>
+
+{% endblock %}
