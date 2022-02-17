@@ -10,12 +10,14 @@ scores = []
 
 @app.route('/')
 def display_root():
+    """ displays page for playing the game """
     board = boggle_game.make_board()
     session['board'] = board
     return render_template('index.html')
 
 @app.route('/guess')
 def check_guess():
+    """ checks user input guess to see if valid and returns an answer """
     word = request.args["word"]
     board = session['board']
     answer = boggle_game.check_valid_word(board,word)
@@ -23,6 +25,7 @@ def check_guess():
 
 @app.route('/newscore', methods=['POST'])
 def update_scores():
+    """ updates list with a new score """
     score = request.json['score']
     scores.append(score)
     print(scores)
