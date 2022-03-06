@@ -1,0 +1,12 @@
+{% extends 'base.html'  %}
+{% block title %}create a new post{% endblock %}
+
+{% block content %}
+
+<form action="/user/{{ user.id }}/post/new" method="post">
+  <p><input id="input-post-title" name="title" type="text" minlength="1" maxlength="200" placeholder="title" width="500"></p>
+  <p><input id="input-post-content" name="content" type="text" minlength="1" maxlength="10000" width="500" height="500"></p>
+  <p><button type="submit">submit</button></p>
+</form>
+
+{% endblock %}

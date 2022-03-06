@@ -1,0 +1,21 @@
+{% extends 'base.html'  %}
+{% block title %}{{ user.first_name }} {{ user.last_name }}{% endblock %}
+
+{% block content %}
+
+<p>{{ user.first_name }} {{ user.last_name }}</p>
+<p><img src="{{ user.image_url }}" /></p>
+
+<p><a href="/user/{{ user.id }}/edit">edit user</a></p>
+<p><a href="/user/{{ user.id }}/delete">delete user</a></p>
+<p><a href="/user/{{ user.id }}/post/new">new post</a></p>
+
+<p> posts
+<ul>
+{% for post in posts %}
+<li><a href="/post/{{ post.id }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+</p>
+
+{% endblock %}
