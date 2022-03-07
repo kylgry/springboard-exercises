@@ -28,3 +28,4 @@ class Post(db.Model):
     content = db.Column(db.String(10000), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False, default=datetime.datetime.utcnow)
     posted_by = db.Column(db.ForeignKey('users.id'))
+    user = db.relationship('User')

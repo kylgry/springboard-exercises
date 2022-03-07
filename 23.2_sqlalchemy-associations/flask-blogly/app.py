@@ -80,15 +80,12 @@ def new_post(id):
 @app.route('/post/<id>')
 def show_post(id):
     post = Post.query.get(id)
-    user = User.query.filter_by(id=post.posted_by).one()
-    print(user.first_name)
-    return render_template('post.html', post=post, user=user)
+    return render_template('post.html', post=post)
 
 @app.route('/post/<id>/edit')
 def show_post_edit(id):
     post = Post.query.get(id)
-    user = User.query.filter_by(id=post.posted_by).one()
-    return render_template('post_edit.html', post=post, user=user)
+    return render_template('post_edit.html', post=post)
 
 @app.route('/post/<id>/edit', methods=['POST'])
 def edit_post(id):
@@ -101,7 +98,7 @@ def edit_post(id):
 @app.route('/post/<id>/delete')
 def delete_post(id):
     post = Post.query.get(id)
-    user = User.query.filter_by(id=post.posted_by).one()
+    user_id = post.user.id
     db.session.delete(post)
     db.session.commit()
-    return redirect(f'/user/{user.id}')
+    return redirect(f'/user/{user_id}')
