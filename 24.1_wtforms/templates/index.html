@@ -1,0 +1,20 @@
+{% extends 'base.html'  %}
+{% block title %}Center For Pet Adoption{% endblock %}
+
+{% block content %}
+
+{% for pet in pets %}
+<div class="pet">
+  {% if pet.photo_url %}<img src="{{ pet.photo_url }}">{% endif %}
+  <span><a href="/{{ pet.id }}">{{ pet.name }}</a> - {% if pet.available %}Available!{% endif %}{% if not pet.available %}Not Available{% endif %}<span>
+</div>
+{% endfor %}
+
+<div class="spacer"></div>
+<div class="button"><a href="/add">Add A Pet</a></div>
+
+{% for msg in get_flashed_messages() %}
+<p class="flash">{{ msg }}</p>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html'  %}
+{% block title %}{{ pet.name }}{% endblock %}
+
+{% block content %}
+
+{% for msg in get_flashed_messages() %}<p class="flash">{{ msg }}</p>{% endfor %}
+
+{% if pet.photo_url %}<img width="600" src="{{ pet.photo_url }}">{% endif %}
+<p>{{ pet.name }} is a {% if pet.age %} {{ pet.age }} year old {% endif %}{{ pet.species }}.<p>
+
+<form id="pet-edit-form" method="POST">
+
+{{ form.hidden_tag() }}
+
+{% for field in form if field.widget.input_type != 'hidden' %}
+
+<p class="form">
+  {{ field.label }}<br>
+  {{ field }}
+  {% for error in field.errors %}
+  <br>{{ error }}
+  {% endfor %}
+</p>
+
+{% endfor %}
+
+<button type="submti">edit</button>
+</form>
+
+{% endblock %}
