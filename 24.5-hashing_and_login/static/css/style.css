@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/noto-sans-v25-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/noto-sans-v25-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+:root {
+  --main-color: lightgrey;
+}
+
+body {
+  font-family: 'Noto Sans';
+  font-size: 15px;
+  background-color: black;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: #FEE0FC;
+}
+
+p {
+  line-height: 2;
+}
+
+ul {
+  list-style-type: square;
+}
+
+.flash {
+  color: red;
+}
+
+main {
+  width: 1000px;
+  margin: auto;
+  padding: 40px;
+}
+
+input, textarea {
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  font-family: 'Noto Sans';
+  font-size: 15px;
+  width: 50%;
+}
+
+label {
+  color: var(--main-color);
+  line-height: 3;
+}
+
+input:focus {
+  border: 1px solid var(--main-color);
+  outline: none;
+}
+
+button {
+  background-color: black;
+  color: var(--main-color);
+  font-family: 'Noto Sans';
+  font-size: 15px;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}

@@ -1,0 +1,11 @@
+{% extends 'base.html'  %}
+{% block title %}hello world{% endblock %}
+
+{% block content %}
+{% if 'user_id' in session %}
+<p>you are logged in. <a href="/logout">logout</a></p>
+{% else %}
+<p><a href="/login">login</a> or <a href="/register">register</a></p>
+{% endif %}
+
+{% endblock %}

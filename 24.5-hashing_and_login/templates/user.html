@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}{{ user.username }}{% endblock %}
+{% block content %}
+
+
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <p class="flash">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+<p>{{ user.username }}</p>
+<ul>
+  <li>{{ user.last_name }}, {{ user.first_name }}</li>
+  <li>{{ user.email }}</li>
+</ul>
+
+<p>feedback<p>
+<ul>
+  {% for post in feedback %}
+  <li>{{post.title }} - {{ post.content }}
+    {% if user.username == session['user_id'] %}
+    --- <a href="/feedback/{{ post.id }}/edit">edit</a> <a href="/feedback/{{ post.id }}/delete">delete</a>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+<p>options</p>
+<ul>
+{% if user.username == session['user_id'] %}
+<li><a href="/feedback">add feedback</a></li>
+<li><a href="/user/{{ user.username }}/delete">delete user</a></li>
+{% endif %}
+<li><a href="/logout">logout</a></li>
+</ul>
+
+{% endblock %}
