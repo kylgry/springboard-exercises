@@ -1,0 +1,14 @@
+{
+  "name": "31.5_testing-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "markov.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
