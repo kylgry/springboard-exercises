@@ -1,0 +1,22 @@
+.Eightball {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  background-color: black;
+  color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.Eightball span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
