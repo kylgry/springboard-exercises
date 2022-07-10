@@ -1,0 +1,14 @@
+
+.Todo form, .Todo button {
+  display: inline;
+}
+
+.Todo button {
+  padding-left: 10px;
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.Todo button:hover {
+  color: red;
+}
