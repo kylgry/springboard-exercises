@@ -1,0 +1,22 @@
+.Colors a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  padding: 20px;
+
+}
+
+a.NewColorLink {
+  font-size: 20px;
+  color: black;
+  background-color: yellow;
+}
+
+.Colors {
+  padding: 50px;
+}
+
+.Colors p {
+  padding: 20px;
+}

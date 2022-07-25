@@ -1,0 +1,9 @@
+.Navigation a {
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.Navigation {
+  padding: 30px;
+}

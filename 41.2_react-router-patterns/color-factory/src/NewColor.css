@@ -1,0 +1,14 @@
+.NewColor {
+  margin: 50px;
+  padding: 50px;
+}
+
+.NewColor input {
+  padding: 10px;
+  margin: 10px;
+}
+
+.NewColor button {
+  padding: 10px;
+  margin: 10px;
+}
