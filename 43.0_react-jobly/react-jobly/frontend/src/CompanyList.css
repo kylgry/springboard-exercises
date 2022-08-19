@@ -1,0 +1,15 @@
+.CompanyList form {
+  padding-bottom: 20px;
+}
+
+.CompanyList input {
+  padding: 10px;
+  border: 1px solid gray;
+  width: calc(100% - 22px);
+  border-radius: 3px;
+}
+
+.CompanyList a {
+  text-decoration: none;
+  color: black;
+}
